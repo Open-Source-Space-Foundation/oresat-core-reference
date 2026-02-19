@@ -18,9 +18,9 @@
 #include "Svc/Subtopologies/DataProducts/SubtopologyTopologyDefs.hpp"
 #include "Svc/Subtopologies/FileHandling/SubtopologyTopologyDefs.hpp"
 
-//ComCcsds Enum Includes
-#include "Svc/Subtopologies/ComCcsds/Ports_ComPacketQueueEnumAc.hpp"
+// ComCcsds Enum Includes
 #include "Svc/Subtopologies/ComCcsds/Ports_ComBufferQueueEnumAc.hpp"
+#include "Svc/Subtopologies/ComCcsds/Ports_ComPacketQueueEnumAc.hpp"
 
 // Include autocoded FPP constants
 #include "OreSat/Top/FppConstantsAc.hpp"
@@ -45,10 +45,18 @@
  * ```
  */
 namespace PingEntries {
-    namespace OreSat_rateGroup1 {enum { WARN = 3, FATAL = 5 };}
-    namespace OreSat_rateGroup2 {enum { WARN = 3, FATAL = 5 };}
-    namespace OreSat_rateGroup3 {enum { WARN = 3, FATAL = 5 };}
-    namespace OreSat_cmdSeq {enum { WARN = 3, FATAL = 5 };}
+namespace OreSat_rateGroup1 {
+enum { WARN = 3, FATAL = 5 };
+}
+namespace OreSat_rateGroup2 {
+enum { WARN = 3, FATAL = 5 };
+}
+namespace OreSat_rateGroup3 {
+enum { WARN = 3, FATAL = 5 };
+}
+namespace OreSat_cmdSeq {
+enum { WARN = 3, FATAL = 5 };
+}
 }  // namespace PingEntries
 
 // Definitions are placed within the same namespace as the FPP module that contains the topology.
@@ -62,12 +70,12 @@ namespace OreSat {
  * contents are entirely up to the definition of the project. This deployment uses subtopologies.
  */
 struct TopologyState {
-    const char* hostname;   //!< Hostname for TCP communication
-    U16 port;              //!< Port for TCP communication
-    CdhCore::SubtopologyState cdhCore;           //!< Subtopology state for CdhCore
-    ComCcsds::SubtopologyState comCcsds;         //!< Subtopology state for ComCcsds 
-    DataProducts::SubtopologyState dataProducts; //!< Subtopology state for DataProducts
-    FileHandling::SubtopologyState fileHandling; //!< Subtopology state for FileHandling
+    const char* hostname;                         //!< Hostname for TCP communication
+    U16 port;                                     //!< Port for TCP communication
+    CdhCore::SubtopologyState cdhCore;            //!< Subtopology state for CdhCore
+    ComCcsds::SubtopologyState comCcsds;          //!< Subtopology state for ComCcsds
+    DataProducts::SubtopologyState dataProducts;  //!< Subtopology state for DataProducts
+    FileHandling::SubtopologyState fileHandling;  //!< Subtopology state for FileHandling
 };
 
 namespace PingEntries = ::PingEntries;

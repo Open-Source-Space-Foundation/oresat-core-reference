@@ -1,0 +1,6 @@
+command-line-options:
+  communication-selection: uart
+  uart-baud: 115200
+  no-app:
+  dictionary: build-artifacts/arm-hf-linux/OreSat/dict/OreSatTopologyDictionary.json
+  output-unframed-data: "-"

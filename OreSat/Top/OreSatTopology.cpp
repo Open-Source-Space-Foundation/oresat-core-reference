@@ -6,7 +6,7 @@
 // Provides access to autocoded functions
 #include <OreSat/Top/OreSatTopologyAc.hpp>
 // Note: Uncomment when using Svc:TlmPacketizer
-//#include <OreSat/Top/OreSatPacketsAc.hpp>
+// #include <OreSat/Top/OreSatPacketsAc.hpp>
 
 // Necessary project-specified types
 #include <Fw/Types/MallocAllocator.hpp>

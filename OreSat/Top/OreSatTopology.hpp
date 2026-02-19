@@ -5,8 +5,8 @@
 // ======================================================================
 #ifndef ORESAT_ORESATTOPOLOGY_HPP
 #define ORESAT_ORESATTOPOLOGY_HPP
-// Included for access to OreSat::TopologyState and OreSat::ConfigObjects::pingEntries. These definitions are required by the
-// autocoder, but are also used in this hand-coded topology.
+// Included for access to OreSat::TopologyState and OreSat::ConfigObjects::pingEntries. These definitions are required
+// by the autocoder, but are also used in this hand-coded topology.
 #include <OreSat/Top/OreSatTopologyDefs.hpp>
 
 namespace OreSat {
@@ -69,14 +69,14 @@ void teardownTopology(const TopologyState& state);
  * This loop is stopped via a stopRateGroups call.
  *
  */
-void startRateGroups(const Fw::TimeInterval& interval = Fw::TimeInterval(1,0));
+void startRateGroups(const Fw::TimeInterval& interval = Fw::TimeInterval(1, 0));
 
 /**
- * \brief stop the rate groups 
+ * \brief stop the rate groups
  *
  * This stops the cycle started by startRateGroups.
  */
 void stopRateGroups();
 
-} // namespace OreSat
+}  // namespace OreSat
 #endif

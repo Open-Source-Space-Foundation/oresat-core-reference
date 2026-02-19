@@ -9,8 +9,11 @@ build-fprime-*
 *.template.hpp
 
 # Misc
+/bin/
 /venv/
 /fprime-venv/
+/fprime-venv-docker/
+/.cache-docker/
 /.idea/
 /.vscode/
 .DS_Store

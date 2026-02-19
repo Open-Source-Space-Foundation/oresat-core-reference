@@ -87,7 +87,7 @@ int main(int argc, char* argv[]) {
 
     // Setup, cycle, and teardown topology
     OreSat::setupTopology(inputs);
-    OreSat::startRateGroups(Fw::TimeInterval(1,0));  // Program loop cycling rate groups at 1Hz
+    OreSat::startRateGroups(Fw::TimeInterval(1, 0));  // Program loop cycling rate groups at 1Hz
     OreSat::teardownTopology(inputs);
     (void)printf("Exiting...\n");
     return 0;
