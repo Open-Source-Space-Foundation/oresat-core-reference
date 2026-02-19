@@ -19,7 +19,7 @@ fprime-venv: uv ## Create a virtual environment
 
 fprime-venv-docker: build-image ## Create a virtual environment for cross-compilation image
 	@$(DOCKER_RUN) uv venv fprime-venv-docker --allow-existing
-	@$(DOCKER_RUN) uv pip install --prerelease=allow --requirement requirements.txt
+	@$(DOCKER_RUN) uv pip install --python /workspace/fprime-venv-docker/bin/python --prerelease=allow --requirement requirements.txt
 
 ##@ Development
 
@@ -33,7 +33,7 @@ fmt: pre-commit-install ## Lint and format files
 
 .PHONY: generate
 generate: submodules fprime-venv-docker ## Generate F Prime OreSat Core Reference
-	@$(DOCKER_UV_RUN) fprime-util generate --force
+	@$(DOCKER_RUN) /workspace/fprime-venv-docker/bin/fprime-util generate --force
 
 .PHONY: generate-if-needed
 BUILD_DIR ?= $(shell pwd)/build-fprime-automatic-arm-hf-linux
@@ -42,7 +42,7 @@ generate-if-needed:
 
 .PHONY: build
 build: submodules fprime-venv-docker generate-if-needed ## Build F Prime OreSat Core Reference
-	@$(DOCKER_UV_RUN) fprime-util build
+	@$(DOCKER_RUN) /workspace/fprime-venv-docker/bin/fprime-util build
 
 .PHONY: clean
 clean: ## Remove all gitignored files

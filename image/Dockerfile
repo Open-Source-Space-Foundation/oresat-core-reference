@@ -1,3 +1,5 @@
+# Default for plain `docker build`; Buildx sets this automatically for multi-platform builds.
+ARG BUILDPLATFORM=linux/amd64
 FROM --platform=$BUILDPLATFORM ubuntu:latest AS cross-compiler-downloader
 
 ENV DEBIAN_FRONTEND=noninteractive
